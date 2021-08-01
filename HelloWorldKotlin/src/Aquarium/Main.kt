@@ -5,15 +5,17 @@ fun main (args: Array<String>) {
 }
 
 private fun buildAquarium() {
-    val myAquarium = Aquarium()
+    val spicinessLevel = SimpleSpice()
+    println("heat ${spicinessLevel.heat}")
+//    val myAquarium = Aquarium()
 
-    println("Length: ${myAquarium.length} " +
-            "Width: ${myAquarium.width} " +
-            "Height: ${myAquarium.height}")
-
-    myAquarium.height = 80
-
-    println("Height: ${myAquarium.height}")
-
-    println("Volume: ${myAquarium.volume} liters")
+//    println("Length: ${myAquarium.length} " +
+//            "Width: ${myAquarium.width} " +
+//            "Height: ${myAquarium.height}")
+//
+//    myAquarium.height = 80
+//
+//    println("Height: ${myAquarium.height}")
+//
+//    println("Volume: ${myAquarium.volume} liters")
 }
