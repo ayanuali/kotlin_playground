@@ -1,0 +1,5 @@
+package Aquarium
+
+class SimpleSpice {
+
+}
