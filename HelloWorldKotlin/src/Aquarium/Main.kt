@@ -1,6 +1,6 @@
 package Aquarium
 
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
     buildAquarium()
 }
 
@@ -21,4 +21,13 @@ private fun buildAquarium() {
 
     val smallAquarium = Aquarium(length = 20, width = 15, height = 30)
     println("Small Aquarium: ${smallAquarium.volume} liters")
+
+    val myAquarium2 = Aquarium(numberOfPish = 9)
+
+    println(
+        "Small Aquarium 2 : ${myAquarium2.volume} liters with " +
+                "height: ${myAquarium2.height} " +
+                "width: ${myAquarium2.width} " +
+                "length: ${myAquarium2.length}"
+    )
 }
