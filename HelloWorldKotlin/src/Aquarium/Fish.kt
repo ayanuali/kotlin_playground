@@ -21,12 +21,13 @@ class Fish(val friendly: Boolean = true, volumeNeeded: Int) {
         }
     }
 
+    //good kotlin classes define only one constructor
     fun fishExample() {
         val fish = Fish(true, 20)
         println("Is this fish friendly? ${fish.friendly}. It needs volume ${fish.size}")
     }
 
     init {
-
+        println("last init block")
     }
 }
