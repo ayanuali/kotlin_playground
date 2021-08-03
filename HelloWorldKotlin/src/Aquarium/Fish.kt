@@ -9,6 +9,10 @@ class Fish(val friendly: Boolean = true, volumeNeeded: Int) {
         println("first init block")
     }
 
+    constructor(): this(true, 9) {
+        println("running secondary constructor")
+    }
+
     init {
         if(friendly) {
             size = volumeNeeded
@@ -20,5 +24,9 @@ class Fish(val friendly: Boolean = true, volumeNeeded: Int) {
     fun fishExample() {
         val fish = Fish(true, 20)
         println("Is this fish friendly? ${fish.friendly}. It needs volume ${fish.size}")
+    }
+
+    init {
+
     }
 }
