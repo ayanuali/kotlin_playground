@@ -1,10 +1,10 @@
 package Aquarium
 
-class Aquarium {
+class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40) {
     //val makes the instance variables immutable, meaning you can't change once they have been assigned a value
-    var width: Int = 20
-    var height: Int = 40
-    var length: Int = 100
+//    var width: Int = 20
+//    var height: Int = 40
+//    var length: Int = 100
 
     var volume: Int
         get() = width * height * length / 1000
