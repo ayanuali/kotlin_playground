@@ -31,3 +31,7 @@ private fun buildAquarium() {
                 "length: ${myAquarium2.length}"
     )
 }
+
+fun makeFish() {
+
+}
