@@ -39,7 +39,7 @@ interface FishColor2 {
 }
 
 class Plecostomus2(fishColor2: FishColor2 = GoldColor):
-    FishAction2 by PrintingFishAction("eata algae"),
+    FishAction2 by PrintingFishAction("eat algae"),
     FishColor2 by GoldColor
 
 object GoldColor: FishColor2 {

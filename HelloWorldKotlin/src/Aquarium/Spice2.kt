@@ -33,3 +33,15 @@ class Spice(val name: String, val spiciness: String = "mild") {
 
     fun makeSalt() = Spice("Salt")
 }
+
+abstract class Spice3 {
+
+}
+
+class SomeSpice1: Spice3() {
+
+}
+
+class SomeSpice2: Spice3() {
+
+}
