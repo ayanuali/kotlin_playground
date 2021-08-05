@@ -13,6 +13,7 @@ interface Grinder {
     fun grind()
 }
 
+//testing git
 class Curry: Spice3(), Grinder, SpiceColor by YellowColor {
     override fun prepareSpice() {
         println("curry")
