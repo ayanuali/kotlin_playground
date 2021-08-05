@@ -33,6 +33,10 @@ private fun buildAquarium() {
     )
 }
 
+fun feedFish(fish: FishAction) {
+    fish.eat()
+}
+
 fun makeFish() {
     val shark = Shark()
     val plecostomus = Plecostomus()
