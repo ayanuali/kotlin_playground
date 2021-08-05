@@ -4,6 +4,11 @@ fun main(args: Array<String>) {
 
 }
 
+fun delegate() {
+    val curry = Curry()
+    println("spice color ${curry.color}")
+}
+
 abstract class Spice3() {
     abstract val heat: Int
     abstract fun prepareSpice()
@@ -14,7 +19,7 @@ interface Grinder {
 }
 
 //testing git
-class Curry: Spice3(), Grinder, SpiceColor by YellowColor {
+class Curry(spiceColor: SpiceColor = YellowColor): Spice3(), Grinder, SpiceColor by spiceColor {
     override fun prepareSpice() {
         println("curry")
     }
