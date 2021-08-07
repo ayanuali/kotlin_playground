@@ -23,7 +23,7 @@ class LakeWater: WaterSupply(true) {
 }
 
 //Any? means any type and null, if you remove ?, null is not allowed anymore
-class Aquarium<T: WaterSupply> (val waterSupply: T) {
+class Aquarium<out T: WaterSupply> (val waterSupply: T) {
     fun addWater() {
         //check, throws exception if water supply needs processing, otherwise it will continue to the next
         //statement
@@ -33,11 +33,15 @@ class Aquarium<T: WaterSupply> (val waterSupply: T) {
     }
 }
 
-fun genericExample() {
-    val aquarium = Aquarium<TapWater>(TapWater())
-    aquarium.waterSupply.addChemicalCleaner()
+fun addItemTo(aquarium: Aquarium<WaterSupply>) = println("item added")
 
-    val aquarium4 = Aquarium(LakeWater())
-    aquarium4.waterSupply.filter()
-    aquarium4.addWater()
+fun genericExample() {
+//    val aquarium = Aquarium<TapWater>(TapWater())
+//    aquarium.waterSupply.addChemicalCleaner()
+//
+//    val aquarium4 = Aquarium(LakeWater())
+//    aquarium4.waterSupply.filter()
+//    aquarium4.addWater()
+    val aquarium: Aquarium<TapWater> = Aquarium(TapWater())
+    addItemTo(aquarium)
 }
