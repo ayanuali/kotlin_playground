@@ -8,8 +8,13 @@ fun main(args: Array<String>) {
     println("Here is ${title} written by ${author} in ${year}")
 
     val puppy = Puppy()
-    puppy.playWithBook(book)
-    println(pages)
+//    val book1 = Book("Oliver Twist", "Charles Dickens", 1837, 540)
+
+//    while (book1.pages > 0) {
+//        puppy.playWithBook(book1)
+//        println("${book1.pages} left in ${book1.title}")
+//    }
+//    println("Sad puppy, no more pages in ${book1.title}. ")
 }
 
 const val MAX_NUMBER_BOOKS_TO_BORROW = 4
@@ -26,7 +31,7 @@ fun Book.tornPages(numberOfTornPages: Int) = if (pages >= numberOfTornPages) pag
 
 class Puppy {
     fun playWithBook(book: Book) {
-        val randomPages = Random.nextInt(0,10)
+        val randomPages = Random.nextInt(12)
         println(randomPages)
         if(pages > 0)
         book.tornPages(randomPages)
