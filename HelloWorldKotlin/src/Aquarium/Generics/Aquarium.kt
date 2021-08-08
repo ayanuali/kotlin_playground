@@ -34,6 +34,8 @@ class Aquarium<out T: WaterSupply> (val waterSupply: T) {
 
         println("adding water from $waterSupply")
     }
+
+    inline fun <reified R: WaterSupply> hasWaterSupplyOfType() = waterSupply is R
 }
 
 interface Cleaner<in T: WaterSupply> {
@@ -63,5 +65,6 @@ fun genericExample() {
     val aquarium: Aquarium<TapWater> = Aquarium(TapWater())
 //    aquarium.addWater(cleaner)
 //    addItemTo(aquarium)
-    isWaterClean(aquarium)
+//    isWaterClean(aquarium)
+    aquarium.hasWaterSupplyOfType<TapWater>()
 }
